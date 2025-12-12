@@ -72,6 +72,7 @@ export default function Layout() {
         </nav>
 
         <div className="sidebar-footer">
+          <p>OSPranto.Official@gmail.com</p>
           <p>©OSPranto Tech 2025</p>
           <p className="version">v1.0.0</p>
         </div>
