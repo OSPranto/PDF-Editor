@@ -33,7 +33,7 @@ export default function Layout() {
 
   // Get current page title
   const currentItem = SIDEBAR_ITEMS.find(item => item.path === location.pathname);
-  const pageTitle = currentItem ? currentItem.label : 'PDF Archon by OSPranto Tech';
+  const pageTitle = currentItem ? currentItem.label : 'OSPranto Tech';
 
   return (
     <div className="app-container">
@@ -41,7 +41,7 @@ export default function Layout() {
       <header className="mobile-header">
         <div className="logo-mobile">
           <span className="logo-icon">👑</span>
-          <span className="logo-text">PDF Archon by OSPranto Tech</span>
+          <span className="logo-text">OSPranto Tech</span>
         </div>
         <button className="menu-btn" onClick={toggleSidebar}>
           {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
@@ -53,7 +53,7 @@ export default function Layout() {
         <div className="sidebar-header">
           <div className="logo-container">
             <span className="logo-icon">👑</span>
-            <h1 className="logo-text">PDF Archon by OSPranto Tech</h1>
+            <h1 className="logo-text">OSPranto Tech</h1>
           </div>
         </div>
 
