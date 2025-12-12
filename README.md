@@ -1,9 +1,7 @@
 # PDF King
 
 ## Overview
-PDF King is a complete browser-based PDF management tool built using React and Vite.  
-It allows users to edit, sign, merge, split, rotate, and compress PDF files directly from their browser without the need for server uploads.  
-All operations run locally, ensuring data privacy, high speed, and smooth performance.
+PDF Archon is a complete browser-based PDF management tool. It allows users to edit, sign, merge, split, rotate, and compress PDF files directly from their browser without the need for server uploads. All operations run locally, ensuring data privacy, high speed, and smooth performance.
 
 ---
 
