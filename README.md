@@ -9,7 +9,7 @@ All operations run locally, ensuring data privacy, high speed, and smooth perfor
 
 ## Live Demo
 Project is deployed and live at:  
-[https://kartik7588.github.io/PDF-King/](https://kartik7588.github.io/PDF-King/)
+https://pdf-osp.vercel.app
 
 ---
 
@@ -44,49 +44,9 @@ Project is deployed and live at:
 - Built with TailwindCSS and Vite for a clean, fast, responsive UI.  
 - Works perfectly on both desktop and mobile browsers.
 
----
-
-## Tech Stack
-
-| Layer | Tools |
-|-------|--------|
-| Frontend | React (Vite), TailwindCSS |
-| PDF Handling | pdf-lib, react-pdf |
-| Routing | React Router DOM (HashRouter) |
-| UI Components | Lucide Icons, Custom Components |
-| Deployment | GitHub Pages using gh-pages |
 
 ---
 
-## Complete Setup and Deployment Guide
-
-### Step 1: Clone the Repository
-Clone this repository to your local system:
-```bash
-git clone https://github.com/kartik7588/PDF-King.git
-cd PDF-King
-```
-
-### Step 2: Install Dependencies
-```bash
-npm install
-```
-
-### Step 3: Run the Development Server
-Run the local development server:
-```bash
-npm run dev
-```
-Then open in your browser:
-http://localhost:5173/
-
-### Step 4: Build for Production
-Build the project for production:
-```bash
-npm run build
-```
-
----
 
 ## How It Works
 - The app uses **pdf-lib** to manipulate PDFs entirely on the client side.
@@ -106,17 +66,3 @@ npm run build
 
 ---
 
-## Developer
-**Author:** Kartik Jangid  
-**Role:** Computer Science Engineer | Full Stack Developer | Creator of PDF King
-
-*"Built to make PDF editing fast, simple, and private."*
-
----
-
-## Acknowledgements
-- React PDF
-- pdf-lib
-- Vite
-- TailwindCSS
-- Lucide Icons
