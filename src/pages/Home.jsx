@@ -62,7 +62,7 @@ export default function Home() {
                  <h2 className="hero-title">
                    PDF Archon by <span className="text-gradient">OSPranto Tech</span>
                 </h2>
-                <p className="hero-title">
+                <p className="hero-subtitle">
                     All your PDF Tools in one place.
                 </p>
                 <p className="hero-subtitle">
