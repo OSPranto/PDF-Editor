@@ -33,10 +33,7 @@ const SIDEBAR_ITEMS = [
   { icon: ImagePlus, label: 'Add Media', path: '/add-media' },
   { icon: Minimize2, label: 'Compress', path: '/compress' },
   { icon: PenTool, label: 'Edit PDF', path: '/edit' },
-];
-
-const BOTTOM_SIDEBAR_ITEMS = [
-    { icon: PhoneCall, label: 'Contact Us', path: '/contact' },
+  { icon: PhoneCall, label: 'Contact Us', path: '/contact' },
 ];
 
 
