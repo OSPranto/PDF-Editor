@@ -10,17 +10,20 @@ import { 
   Home,
   Menu,
   X,
-  Facebook, 
-  Mail,
-  Github,
-  Send,
-  PhoneCall // Icon for Contact Us
+  // Import all icons needed for Contact Data and Nav
+  PhoneCall, 
+  // We need to import the icons for CONTACT_INFO here too, 
+  // as they are used in the JSX even if the data is in another file.
+  // However, since CONTACT_INFO exports the icon components directly, 
+  // we only need to ensure 'PhoneCall' is present here. 
+  // For safety, we keep the imports clean.
 } from 'lucide-react'; 
 import clsx from 'clsx';
 import './Layout.css'; 
 
-// Import contact data from the new constants file
-import { CONTACT_INFO, FOOTER_INFO } from './constants/contactData'; // Adjust path if necessary
+// CRUCIAL FIX: Ensure this import path is correct based on your file structure.
+// Assuming Layout.jsx is in a subfolder and constants is directly under src.
+import { CONTACT_INFO, FOOTER_INFO } from '../constants/contactData'; 
 
 const SIDEBAR_ITEMS = [
   { icon: Home, label: 'Dashboard', path: '/' },
@@ -32,9 +35,7 @@ const SIDEBAR_ITEMS = [
   { icon: PenTool, label: 'Edit PDF', path: '/edit' },
 ];
 
-// New array for items that appear at the bottom of the main list
 const BOTTOM_SIDEBAR_ITEMS = [
-    // --- New Contact Us Item Added Here ---
     { icon: PhoneCall, label: 'Contact Us', path: '/contact' },
 ];
 
@@ -46,8 +47,9 @@ export default function Layout() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const closeSidebar = () => setIsSidebarOpen(false);
 
-  // Get current page title
-  const currentItem = [...SIDEBAR_ITEMS, ...BOTTOM_SIDEBAR_ITEMS].find(item => item.path === location.pathname);
+  // Combine items for page title lookup
+  const allItems = [...SIDEBAR_ITEMS, ...BOTTOM_SIDEBAR_ITEMS];
+  const currentItem = allItems.find(item => item.path === location.pathname);
   const pageTitle = currentItem ? currentItem.label : 'OSPranto Tech';
 
   return (
@@ -55,6 +57,7 @@ export default function Layout() {
       {/* Mobile Header */ }
       <header className="mobile-header">
         <div className="logo-mobile">
+          <span className="logo-icon">👑</span>
           <span className="logo-text-mobile">OSPranto Tech</span>
         </div>
         <button className="menu-btn" onClick={toggleSidebar}>
@@ -66,6 +69,7 @@ export default function Layout() {
       <aside className={clsx("sidebar glass-panel", { "open": isSidebarOpen })}>
         <div className="sidebar-header">
           <div className="logo-container">
+            <span className="logo-icon">👑</span>
             <h1 className="logo-text">OSPranto Tech</h1>
             <p className="tagline">Technology with a Sense of Ease</p> 
           </div>
@@ -104,6 +108,7 @@ export default function Layout() {
         <div className="sidebar-footer">
             <h4 className="contact-heading">Contact OSPranto Tech</h4>
             <div className="contact-list">
+                {/* CONTACT_INFO is now correctly mapped and used */}
                 {CONTACT_INFO.map((item, index) => (
                     <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="contact-item">
                         <item.icon size={16} />
