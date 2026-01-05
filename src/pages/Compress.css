@@ -21,7 +21,7 @@ input[type="range"] {
     background: var(--color-bg-secondary);
     border-radius: 4px;
     outline: none;
-    animation: spin 1s linear infinite;
+    /* এখান থেকে animation লাইনটি সরিয়ে দেওয়া হয়েছে */
 }
 
 .fade-in-text {
@@ -32,7 +32,6 @@ input[type="range"] {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
